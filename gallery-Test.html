@@ -1090,7 +1090,7 @@
             <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 1,
+        amountOfImages: 2,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1109,6 +1109,23 @@
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button @click="activeImage = 0; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
+                            
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/085505be-d90d-4579-b72f-0a5f43f88c60.png" alt="Test for Bielinski Bros Landscaping in Erie County, NY" loading="lazy"/>
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 1; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
                                 <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/689a9fa4-7a8b-46fd-9a1f-ad78577df631.png" alt="Test for Bielinski Bros Landscaping in Erie County, NY" loading="lazy"/>
@@ -1167,6 +1184,13 @@
                             <ul tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="relative w-full">
                                 
                                     <li class="flex flex-col" x-show="activeImage === 0">
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/085505be-d90d-4579-b72f-0a5f43f88c60.png" alt="Test for Bielinski Bros Landscaping in Erie County, NY" loading="lazy"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 1">
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/689a9fa4-7a8b-46fd-9a1f-ad78577df631.png" alt="Test for Bielinski Bros Landscaping in Erie County, NY" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
